@@ -4,6 +4,10 @@ body {
     text-align: center;
 }
 
+p{
+    font-size: 16px;
+}
+
 .input-number{
     width: 2em;
     margin: 10px;
