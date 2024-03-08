@@ -4,9 +4,10 @@ body {
     text-align: center;
 }
 
-.input{
-    width: 2en;
+.input-number{
+    width: 2em;
 }
+
 .input-box {
     display: flex;
     margin-bottom: 5px;
