@@ -38,4 +38,14 @@ document.getElementById('start').addEventListener('click', function () {
 		alert('Time\'s up!')
         }
     }, 1000);
+
+document.getElementById('stop').addEventListener('click', function () {
+clearInterval(intervalId);
+  intervalId = null;
+});
+
+document.getElementById('reset').addEventListener('click', function () {
+remainingSeconds = 0;
+});
+	
 });
