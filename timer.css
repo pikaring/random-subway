@@ -4,9 +4,12 @@ body {
     text-align: center;
 }
 
+.input{
+    width: 2en;
+}
 .input-box {
-    margin-bottom: 10px;
-    width: 2em;
+    display: flex;
+    margin-bottom: 5px;
 }
 
 .progress-bar {
