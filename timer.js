@@ -25,9 +25,11 @@ document.getElementById('start').addEventListener('click', function () {
         progressBar.style.width = percentComplete + '%';
 
         const displayHours = zeroPadding(Math.floor(remainingSeconds / 3600),2);
+        const displayHours = zeroPadding(Math.floor((remainingSeconds % 3600) / 60),2);
+        const displayHours = zeroPadding(remainingSeconds % 60,2);
 //        const displayHours = Math.floor(remainingSeconds / 3600);
-        const displayMinutes = Math.floor((remainingSeconds % 3600) / 60);
-        const displaySeconds = remainingSeconds % 60;
+//        const displayMinutes = Math.floor((remainingSeconds % 3600) / 60);
+//        const displaySeconds = remainingSeconds % 60;
         countdownDisplay.textContent = `${displayHours}:${displayMinutes}:${displaySeconds}`;
 
         if (--remainingSeconds < 0) {
