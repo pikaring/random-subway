@@ -6,16 +6,17 @@ body {
 
 .input-box {
     margin-bottom: 10px;
+    width: 2em;
 }
 
 .progress-bar {
-    width: 80%;
+    width: 100%;
     height: 20px;
     background-color: #ccc;
     margin-top: 10px;
 }
 
 #progress {
-    height: 80%;
+    height: 100%;
     background-color: #3498db;
 }
