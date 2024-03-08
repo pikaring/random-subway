@@ -27,9 +27,6 @@ document.getElementById('start').addEventListener('click', function () {
         const displayHours = zeroPadding(Math.floor(remainingSeconds / 3600),2);
         const displayMinutes = zeroPadding(Math.floor((remainingSeconds % 3600) / 60),2);
         const displaySeconds = zeroPadding(remainingSeconds % 60,2);
-//        const displayHours = Math.floor(remainingSeconds / 3600);
-//        const displayMinutes = Math.floor((remainingSeconds % 3600) / 60);
-//        const displaySeconds = remainingSeconds % 60;
         countdownDisplay.textContent = `${displayHours}:${displayMinutes}:${displaySeconds}`;
 
         if (--remainingSeconds < 0) {
@@ -39,6 +36,7 @@ document.getElementById('start').addEventListener('click', function () {
         }
     }, 1000);
 
+/*
 document.getElementById('stop').addEventListener('click', function () {
 clearInterval(intervalId);
   intervalId = null;
@@ -47,5 +45,6 @@ clearInterval(intervalId);
 document.getElementById('reset').addEventListener('click', function () {
 remainingSeconds = 0;
 });
+*/
 	
 });
