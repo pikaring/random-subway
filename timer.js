@@ -4,6 +4,10 @@ document.getElementById('start').addEventListener('click', function () {
     const minutes = parseInt(document.getElementById('minutes').value, 10);
     const seconds = parseInt(document.getElementById('seconds').value, 10);
 
+    if (isNaN(hours)) { hours = 0; }
+    if (isNaN(minutes)) { minutes = 0; }
+    if (isNaN(seconds)) { seconds = 0; }
+
     if (isNaN(hours) || isNaN(minutes) || isNaN(seconds)) {
         alert('Please enter valid numeric values for hours, minutes, and seconds.');
         return;
