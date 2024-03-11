@@ -34,6 +34,7 @@ document.getElementById('start').addEventListener('click', function () {
             if (--remainingSeconds < 0) {
                 clearInterval(intervalId);
                 countdownDisplay.textContent = 'Time\'s up!';
+                alert("Time\'s up!");
             }
         }
     }, 1000);
@@ -51,6 +52,8 @@ document.getElementById('start').addEventListener('click', function () {
             pauseButton.classList.add('paused-button'); // 一時中断されたらクラスを追加
         } else {
             pauseButton.classList.remove('paused-button'); // 再開されたらクラスを削除
+        }
+        });
     */
 
     // リセットボタンのクリックイベント
