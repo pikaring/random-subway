@@ -43,7 +43,7 @@ document.getElementById('start').addEventListener('click', function () {
         isPaused = !isPaused; // フラグを切り替える
     });
     
-    <--!
+    /*
      // 一時中断ボタンのクリックイベント(新規)
     pauseButton.addEventListener('click', function () {
         isPaused = !isPaused; // フラグを切り替える
@@ -51,7 +51,7 @@ document.getElementById('start').addEventListener('click', function () {
             pauseButton.classList.add('paused-button'); // 一時中断されたらクラスを追加
         } else {
             pauseButton.classList.remove('paused-button'); // 再開されたらクラスを削除
-    -->
+    */
 
     // リセットボタンのクリックイベント
     document.getElementById('reset').addEventListener('click', function () {
