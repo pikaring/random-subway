@@ -1,7 +1,7 @@
 // timer.js
 
-function zeroPadding(NUM, LEN){
-	return ( Array(LEN).join('0') + NUM ).slice( -LEN );
+function zeroPadding(NUM, LEN) {
+    return (Array(LEN).join('0') + NUM).slice(-LEN);
 }
 
 document.getElementById('start').addEventListener('click', function () {
@@ -16,25 +16,30 @@ document.getElementById('start').addEventListener('click', function () {
 
     const totalSeconds = hours * 3600 + minutes * 60 + seconds;
     let remainingSeconds = totalSeconds;
+    let isPaused = false; // フラグを追加
 
     const progressBar = document.getElementById('progress');
     const countdownDisplay = document.getElementById('countdown');
 
     const intervalId = setInterval(function () {
-        const percentComplete = ((totalSeconds - remainingSeconds) / totalSeconds) * 100;
-        progressBar.style.width = percentComplete + '%';
+        if (!isPaused) { // 一時中断されていない場合のみ進める
+            const percentComplete = ((totalSeconds - remainingSeconds) / totalSeconds) * 100;
+            progressBar.style.width = percentComplete + '%';
 
-        const displayHours = zeroPadding(Math.floor(remainingSeconds / 3600),2);
-        const displayMinutes = zeroPadding(Math.floor((remainingSeconds % 3600) / 60),2);
-        const displaySeconds = zeroPadding(remainingSeconds % 60,2);
-//        const displayHours = Math.floor(remainingSeconds / 3600);
-//        const displayMinutes = Math.floor((remainingSeconds % 3600) / 60);
-//        const displaySeconds = remainingSeconds % 60;
-        countdownDisplay.textContent = `${displayHours}:${displayMinutes}:${displaySeconds}`;
+            const displayHours = zeroPadding(Math.floor(remainingSeconds / 3600), 2);
+            const displayMinutes = zeroPadding(Math.floor((remainingSeconds % 3600) / 60), 2);
+            const displaySeconds = zeroPadding(remainingSeconds % 60, 2);
+            countdownDisplay.textContent = `${displayHours}:${displayMinutes}:${displaySeconds}`;
 
-        if (--remainingSeconds < 0) {
-            clearInterval(intervalId);
-            countdownDisplay.textContent = 'Time\'s up!';
+            if (--remainingSeconds < 0) {
+                clearInterval(intervalId);
+                countdownDisplay.textContent = 'Time\'s up!';
+            }
         }
     }, 1000);
+
+    // 一時中断ボタンのクリックイベント
+    document.getElementById('pause').addEventListener('click', function () {
+        isPaused = !isPaused; // フラグを切り替える
+    });
 });
