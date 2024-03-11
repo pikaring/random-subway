@@ -34,6 +34,7 @@ document.getElementById('start').addEventListener('click', function () {
             if (--remainingSeconds < 0) {
                 clearInterval(intervalId);
                 countdownDisplay.textContent = 'Time\'s up!';
+                alert("Time\'s up!");
             }
         }
     }, 1000);
