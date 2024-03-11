@@ -34,7 +34,6 @@ document.getElementById('start').addEventListener('click', function () {
             if (--remainingSeconds < 0) {
                 clearInterval(intervalId);
                 countdownDisplay.textContent = 'Time\'s up!';
-                alert("Time\'s up!");
             }
         }
     }, 1000);
@@ -42,5 +41,13 @@ document.getElementById('start').addEventListener('click', function () {
     // 一時中断ボタンのクリックイベント
     document.getElementById('pause').addEventListener('click', function () {
         isPaused = !isPaused; // フラグを切り替える
+    });
+
+    // リセットボタンのクリックイベント
+    document.getElementById('reset').addEventListener('click', function () {
+        clearInterval(intervalId); // タイマーを停止
+        remainingSeconds = totalSeconds; // 残り時間をリセット
+        progressBar.style.width = '0%'; // プログレスバーを初期状態に戻す
+        countdownDisplay.textContent = ''; // 表示を初期状態に戻す
     });
 });
