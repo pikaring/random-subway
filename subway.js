@@ -16,7 +16,7 @@ const sandwiches = [
     { name: "アボカドチキン", price: 620 },
     { name: "ハムアボカド", price: 620 },
     { name: "スパイシークラブハウス", price: 670 },
-    { name: "ローストビーフ, price: 750 }
+    { name: "ローストビーフ", price: 750 }
     // 他のサンドイッチ
 ];
 
