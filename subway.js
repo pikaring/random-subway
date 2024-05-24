@@ -68,6 +68,15 @@ const sauces = [
     "チボトレソース"
 ];
 
+const images = [
+    "folder/1.png",
+    "folder/2.png",
+    "folder/3.png",
+    "folder/4.png",
+    "folder/5.png",
+    "folder/6.png",
+    ]
+
 function getRandomItem(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
@@ -80,6 +89,7 @@ function generateRandomMenu() {
     const veggieSelection = getRandomItem(veggies);
     const accentVeggie = getRandomItem(accentVeggies);
     const sauce = getRandomItem(sauces);
+    const image = getRandomItem(images);
 
     const totalPrice = sandwich.price + paidTopping.price;
 
@@ -90,4 +100,5 @@ function generateRandomMenu() {
     document.getElementById("accentVeggies").textContent = accentVeggie;
     document.getElementById("sauce").textContent = sauce;
     document.getElementById("price").textContent = totalPrice;
+    document.getElementById("Image").src = image;
 }
