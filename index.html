@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="timer.css">
-    <title>Copilot Timer</title>
+    <title>サブウェイランダムメニュー決定</title>
 </head>
 <body>
-    <h3>Custom Timer</h3>
-    <div class="input-box">
-        <input type="number" class="input-number" id="hours" value="0" placeholder="Hours">
-        <label>時間</label>
-        <input type="number" class="input-number" id="minutes" value="0" placeholder="Minutes">
-        <labeL>分</labeL>
-        <input type="number" class="input-number" id="seconds" value="0" placeholder="Seconds">
-        <labeL>秒</labeL>
+    <h1>ランダムなサブウェイサンドイッチメニュー</h1>
+    <button onclick="generateRandomMenu()">ランダムメニューを生成</button>
+    <div id="menu">
+        <h2>サンドイッチ: <span id="sandwich"></span></h2>
+        <h2>パン: <span id="bread"></span></h2>
+        <h2>有料トッピング: <span id="paidToppings"></span></h2>
+        <h2>野菜: <span id="veggies"></span></h2>
+        <h2>アクセント野菜: <span id="accentVeggies"></span></h2>
+        <h2>ドレッシング・ソース: <span id="sauce"></span></h2>
+        <h2>価格: ¥<span id="price"></span></h2>
     </div>
-    <button id="start">START</button>
-    <button id="pause">PAUSE</button>
-    <button id="reset">RESET</button>
-    <div class="progress-bar">
-        <div id="progress"></div>
-    </div>
-    <p id="countdown"></p>
-    <script src="timer.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
