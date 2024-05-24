@@ -1,1 +1,1 @@
-https://pikaring.github.io/custom-timer/
+https://pikaring.github.io/random-subway/
