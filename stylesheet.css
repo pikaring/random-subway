@@ -1,7 +1,16 @@
-/* timer.css */
+/* stylesheet.css */
 body {
     font-family: Arial, sans-serif;
     text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid 2px orange;/*表全体を線で囲う*/
+}
+table th, table td {
+  border: dashed 1px orange;/**/
+  /*破線 1px オレンジ*/
 }
 
 p{
