@@ -100,5 +100,5 @@ function generateRandomMenu() {
     document.getElementById("accentVeggies").textContent = accentVeggie;
     document.getElementById("sauce").textContent = sauce;
     document.getElementById("price").textContent = totalPrice;
-    document.getElementById("Image").src = image;
+    document.getElementById("sandwichImage").src = image;
 }
