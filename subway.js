@@ -74,7 +74,7 @@ const images = [
     "folder/3.png",
     "folder/4.png",
     "folder/5.png",
-    "folder/6.png",
+    "folder/6.png"
     ]
 
 function getRandomItem(array) {
